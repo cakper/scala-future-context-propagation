@@ -1,0 +1,12 @@
+<!DOCTYPE aspectj PUBLIC "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd">
+
+<aspectj>
+    <aspects>
+        <aspect name="future.FutureInstrumentation"/>
+    </aspects>
+
+    <weaver>
+        <include within="scala.concurrent.impl.CallbackRunnable"/>
+        <include within="future.FutureInstrumentation"/>
+    </weaver>
+</aspectj>
